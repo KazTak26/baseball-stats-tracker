@@ -66,23 +66,6 @@
             color: white;
         }
 
-        .tab-button.refresh-btn {
-            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-            color: white;
-            margin-left: auto;
-            font-weight: 700;
-        }
-
-        .tab-button.refresh-btn:hover {
-            background: linear-gradient(135deg, #66BB6A 0%, #56C569 100%);
-            animation: spin 0.6s;
-        }
-
-        @keyframes spin {
-            from { transform: translateY(-2px) rotate(0deg); }
-            to { transform: translateY(-2px) rotate(360deg); }
-        }
-
         .tab-content {
             display: none;
             background: white;
@@ -97,69 +80,38 @@
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        .form-group {
+        h2 {
+            color: #1e3c72;
             margin-bottom: 20px;
         }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #333;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 6px;
-            font-size: 1em;
-            transition: border-color 0.3s;
-        }
-
-        input:focus, select:focus {
-            outline: none;
-            border-color: #2a5298;
+        h3 {
+            color: #2a5298;
+            margin-top: 20px;
+            margin-bottom: 15px;
         }
 
         button {
-            background: #ff6b35;
+            background: #1e90ff;
             color: white;
             border: none;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 1em;
             font-weight: 600;
-            transition: all 0.3s;
+            transition: background 0.3s ease;
         }
 
         button:hover {
-            background: #e55a24;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+            background: #1678d2;
         }
 
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
+        button:active {
+            transform: scale(0.98);
         }
 
         .stats-table {
@@ -168,147 +120,74 @@
             margin-top: 20px;
         }
 
-        .stats-table thead {
-            background: #2a5298;
-            color: white;
-        }
-
         .stats-table th {
-            padding: 15px;
+            background: #1e3c72;
+            color: white;
+            padding: 12px;
             text-align: left;
             font-weight: 600;
         }
 
         .stats-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #eee;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
         }
 
-        .stats-table tbody tr:hover {
+        .stats-table tr:hover {
             background: #f5f5f5;
-        }
-
-        .stats-table tbody tr:nth-child(even) {
-            background: #f9f9f9;
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn-small {
-            padding: 6px 12px;
-            font-size: 0.9em;
-            border-radius: 4px;
-            cursor: pointer;
-            border: none;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-
-        .btn-edit {
-            background: #3498db;
-            color: white;
-        }
-
-        .btn-edit:hover {
-            background: #2980b9;
-        }
-
-        .btn-delete {
-            background: #e74c3c;
-            color: white;
-        }
-
-        .btn-delete:hover {
-            background: #c0392b;
-        }
-
-        .btn-stat {
-            background: #27ae60;
-            color: white;
-            padding: 8px 12px;
-        }
-
-        .btn-stat:hover {
-            background: #229954;
-        }
-
-        .stat-badge {
-            display: inline-block;
-            background: #ecf0f1;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.9em;
-            margin: 2px;
         }
 
         .empty-state {
             text-align: center;
-            padding: 40px;
             color: #999;
+            padding: 40px 20px;
         }
 
-        .empty-state p {
-            font-size: 1.1em;
-            margin-bottom: 10px;
+        .form-group {
+            margin-bottom: 20px;
         }
 
-        .leaderboard-item {
-            display: grid;
-            grid-template-columns: 50px 1fr auto;
-            align-items: center;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 6px;
-            margin-bottom: 10px;
-            gap: 15px;
-            border-left: 4px solid #2a5298;
-        }
-
-        .rank {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #2a5298;
-            text-align: center;
-        }
-
-        .player-info h3 {
+        .form-group label {
+            display: block;
             margin-bottom: 5px;
+            font-weight: 600;
             color: #333;
         }
 
-        .player-info p {
-            font-size: 0.9em;
-            color: #666;
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
         }
 
-        .stat-value {
-            font-weight: bold;
-            color: #ff6b35;
-            font-size: 1.2em;
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
         }
 
         .modal {
             display: none;
             position: fixed;
-            z-index: 1000;
-            left: 0;
             top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .modal.active {
-            display: flex;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
             align-items: center;
             justify-content: center;
         }
 
+        .modal.active {
+            display: flex;
+        }
+
         .modal-content {
-            background-color: white;
+            background: white;
             padding: 30px;
             border-radius: 12px;
             max-width: 500px;
@@ -338,20 +217,87 @@
             color: #333;
         }
 
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 12px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            border: 1px solid #c3e6cb;
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 0.9em;
+            margin-right: 5px;
         }
 
-        .record-stat-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 20px;
+        .btn-delete {
+            background: #e74c3c;
+        }
+
+        .btn-delete:hover {
+            background: #c0392b;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 5px;
+        }
+
+        .leader-card {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ff6b35;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .leader-card.gold {
+            border-left-color: #ffd700;
+            background: #fffaf0;
+        }
+
+        .leader-card.silver {
+            border-left-color: #c0c0c0;
+            background: #f8f8f8;
+        }
+
+        .leader-card.bronze {
+            border-left-color: #cd7f32;
+            background: #fff5f0;
+        }
+
+        .leader-rank {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #666;
+            margin-right: 15px;
+        }
+
+        .leader-info {
+            flex: 1;
+        }
+
+        .leader-name {
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .leader-stat {
+            color: #ff6b35;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .stat-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .stat-buttons button {
+            padding: 10px 15px;
+            font-size: 0.9em;
+        }
+
+        .stat-buttons button.active {
+            background: #ff6b35;
         }
     </style>
 </head>
@@ -365,11 +311,10 @@
         <div class="tabs">
             <button class="tab-button active" onclick="switchTab('players')">🏟️ Players</button>
             <button class="tab-button" onclick="switchTab('games')">📅 Game Log</button>
-            <button class="tab-button" onclick="switchTab('stats')">📊 Record Game</button>
+            <button class="tab-button" onclick="switchTab('stats')">📊 Record Stats</button>
             <button class="tab-button" onclick="switchTab('batting')">🏏 Batting Leaders</button>
             <button class="tab-button" onclick="switchTab('pitching')">⚾ Pitching Leaders</button>
             <button class="tab-button" onclick="switchTab('settings')">⚙️ Settings</button>
-            <button class="tab-button refresh-btn" onclick="syncMLBStats()" title="Sync with MLB Stats">🔄 Refresh</button>
         </div>
 
         <!-- Players Tab -->
@@ -388,11 +333,7 @@
 
         <!-- Record Stats Tab -->
         <div id="stats" class="tab-content">
-            <h2>Record Game Stats</h2>
-            <div class="form-group">
-                <label>Game Date:</label>
-                <input type="date" id="gameDate">
-            </div>
+            <h2>Record Player Stats</h2>
             <div class="form-group">
                 <label>Select Player:</label>
                 <select id="statPlayerSelect" onchange="loadPlayerStatsForm()">
@@ -400,7 +341,7 @@
                 </select>
             </div>
             <div id="statsForm" style="display: none;">
-                <h3>Batting Stats</h3>
+                <h3>📊 Batting Stats</h3>
                 <div class="form-row">
                     <div class="form-group">
                         <label>Hits:</label>
@@ -423,16 +364,8 @@
                         <input type="number" id="runs" min="0" value="0">
                     </div>
                 </div>
-                <h3 style="margin-top: 30px;">Pitching Stats</h3>
+                <h3>⚾ Pitching Stats</h3>
                 <div class="form-row">
-                    <div class="form-group">
-                        <label>Strikeouts (K):</label>
-                        <input type="number" id="strikeouts" min="0" value="0">
-                    </div>
-                    <div class="form-group">
-                        <label>Walks:</label>
-                        <input type="number" id="walks" min="0" value="0">
-                    </div>
                     <div class="form-group">
                         <label>Wins:</label>
                         <input type="number" id="wins" min="0" value="0">
@@ -440,6 +373,10 @@
                     <div class="form-group">
                         <label>Losses:</label>
                         <input type="number" id="losses" min="0" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Strikeouts:</label>
+                        <input type="number" id="strikeouts" min="0" value="0">
                     </div>
                     <div class="form-group">
                         <label>ERA:</label>
@@ -450,19 +387,19 @@
                         <input type="number" id="inningsPitched" min="0" step="0.1" value="0">
                     </div>
                 </div>
-                <button onclick="recordStats()">Record Stats</button>
+                <button onclick="addStatToPlayer()" style="background: #27ae60;">Update Stats</button>
             </div>
         </div>
 
         <!-- Batting Leaders Tab -->
         <div id="batting" class="tab-content">
             <h2>Batting Leaders</h2>
-            <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 30px;">
-                <button onclick="refreshBattingLeaders('homeRuns')" class="tab-button" style="background: #ff6b35; color: white; margin: 0;">Home Runs</button>
-                <button onclick="refreshBattingLeaders('hits')" class="tab-button" style="margin: 0;">Hits</button>
-                <button onclick="refreshBattingLeaders('rbis')" class="tab-button" style="margin: 0;">RBIs</button>
-                <button onclick="refreshBattingLeaders('average')" class="tab-button" style="margin: 0;">Batting Average</button>
-                <button onclick="refreshBattingLeaders('runs')" class="tab-button" style="margin: 0;">Runs</button>
+            <div class="stat-buttons">
+                <button class="stat-btn" data-stat="homeRuns" onclick="refreshBattingLeaders('homeRuns')">Home Runs</button>
+                <button class="stat-btn" data-stat="hits" onclick="refreshBattingLeaders('hits')">Hits</button>
+                <button class="stat-btn" data-stat="rbis" onclick="refreshBattingLeaders('rbis')">RBIs</button>
+                <button class="stat-btn" data-stat="average" onclick="refreshBattingLeaders('average')">Batting Average</button>
+                <button class="stat-btn" data-stat="runs" onclick="refreshBattingLeaders('runs')">Runs</button>
             </div>
             <div id="battingLeaders"></div>
         </div>
@@ -470,10 +407,10 @@
         <!-- Pitching Leaders Tab -->
         <div id="pitching" class="tab-content">
             <h2>Pitching Leaders</h2>
-            <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 30px;">
-                <button onclick="refreshPitchingLeaders('wins')" class="tab-button" style="background: #ff6b35; color: white; margin: 0;">Wins</button>
-                <button onclick="refreshPitchingLeaders('strikeouts')" class="tab-button" style="margin: 0;">Strikeouts</button>
-                <button onclick="refreshPitchingLeaders('era')" class="tab-button" style="margin: 0;">ERA</button>
+            <div class="stat-buttons">
+                <button class="stat-btn" data-stat="wins" onclick="refreshPitchingLeaders('wins')">Wins</button>
+                <button class="stat-btn" data-stat="strikeouts" onclick="refreshPitchingLeaders('strikeouts')">Strikeouts</button>
+                <button class="stat-btn" data-stat="era" onclick="refreshPitchingLeaders('era')">ERA</button>
             </div>
             <div id="pitchingLeaders"></div>
         </div>
@@ -481,19 +418,14 @@
         <!-- Settings Tab -->
         <div id="settings" class="tab-content">
             <h2>Settings</h2>
-            <div style="margin-bottom: 30px;">
-                <h3>MLB Data Sync</h3>
-                <p style="margin-bottom: 15px; color: #666;">Fetch real-time stats from MLB's official database for 2026 season</p>
-                <button onclick="syncMLBStats()" style="background: #1e90ff; color: white; margin-right: 10px; margin-bottom: 10px;">⚾ Sync with MLB Stats</button>
-                <div id="syncStatus" style="display: none; margin-top: 10px; padding: 10px; border-radius: 6px;"></div>
-                <div id="syncError" style="display: none; margin-top: 10px; padding: 10px; border-radius: 6px; background: #ffe6e6; color: #c70039; border: 1px solid #ffcccc;"></div>
-            </div>
-            <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
             <h3>Data Management</h3>
             <button onclick="exportData()" style="margin-right: 10px; margin-bottom: 10px;">📥 Export Data</button>
-            <button onclick="importData()" style="margin-right: 10px; margin-bottom: 10px;">📤 Import Data</button>
+            <button onclick="document.getElementById('importFile').click()" style="margin-right: 10px; margin-bottom: 10px;">📤 Import Data</button>
             <button onclick="clearAllData()" style="background: #e74c3c; margin-bottom: 10px;">🗑️ Clear All Data</button>
             <input type="file" id="importFile" accept=".json" style="display: none;">
+            <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
+            <h3>Info</h3>
+            <p>All data is stored locally in your browser. Export to backup!</p>
         </div>
     </div>
 
@@ -501,27 +433,20 @@
     <div id="addPlayerModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Add New Player</h2>
+                <h3 style="margin: 0;">Add New Player</h3>
                 <button class="close-modal" onclick="closeAddPlayerModal()">×</button>
             </div>
             <div class="form-group">
                 <label>Player Name:</label>
-                <input type="text" id="playerName" placeholder="Enter player name">
+                <input type="text" id="playerName">
             </div>
             <div class="form-group">
                 <label>Jersey Number:</label>
-                <input type="number" id="jerseyNumber" placeholder="Enter jersey number">
+                <input type="text" id="jerseyNumber">
             </div>
             <div class="form-group">
                 <label>Position:</label>
-                <select id="playerPosition">
-                    <option value="">Select Position</option>
-                    <option value="Pitcher">Pitcher</option>
-                    <option value="Catcher">Catcher</option>
-                    <option value="Infield">Infield</option>
-                    <option value="Outfield">Outfield</option>
-                    <option value="Designated Hitter">Designated Hitter</option>
-                </select>
+                <input type="text" id="playerPosition">
             </div>
             <button onclick="addPlayer()" style="width: 100%;">Add Player</button>
         </div>
@@ -531,73 +456,87 @@
     <div id="addGameModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Log Game</h2>
+                <h3 style="margin: 0;">Log Game</h3>
                 <button class="close-modal" onclick="closeAddGameModal()">×</button>
             </div>
             <div class="form-group">
-                <label>Game Date:</label>
+                <label>Date:</label>
                 <input type="date" id="newGameDate">
             </div>
             <div class="form-group">
                 <label>Opponent:</label>
-                <input type="text" id="opponent" placeholder="Enter opponent name">
+                <input type="text" id="opponent">
             </div>
             <div class="form-group">
                 <label>Result:</label>
-                <select id="result">
-                    <option value="">-- Select Result --</option>
+                <select id="gameResult">
                     <option value="W">Win</option>
                     <option value="L">Loss</option>
                     <option value="T">Tie</option>
                 </select>
             </div>
             <div class="form-group">
-                <label>Score (If needed):</label>
-                <input type="text" id="score" placeholder="e.g., 5-3">
+                <label>Score:</label>
+                <input type="text" id="gameScore" placeholder="e.g., 5-3">
             </div>
             <button onclick="addGame()" style="width: 100%;">Log Game</button>
         </div>
     </div>
 
     <script>
-        // Initialize app
+        // Default players - all 12
         const defaultPlayers = [
-            { id: 1, name: 'Shohei Ohtani', number: '16', position: 'Designated Hitter', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, walks: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
-            { id: 2, name: 'Yoshinobu Yamamoto', number: '18', position: 'Pitcher', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, walks: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
-            { id: 3, name: 'Roki Sasaki', number: '14', position: 'Pitcher', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, walks: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
-            { id: 4, name: 'Seiya Suzuki', number: '27', position: 'Outfield', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, walks: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
-            { id: 5, name: 'Shota Imanaga', number: '11', position: 'Pitcher', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, walks: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
-            { id: 6, name: 'Yu Darvish', number: '22', position: 'Pitcher', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, walks: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
-            { id: 7, name: 'Masataka Yoshida', number: '7', position: 'Outfield', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, walks: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
-            { id: 8, name: 'Yuki Matsui', number: '23', position: 'Infield', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, walks: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
-            { id: 9, name: 'Yusei Kikuchi', number: '16', position: 'Pitcher', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, walks: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
-            { id: 10, name: 'Tomoyoki Sugano', number: '24', position: 'Pitcher', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, walks: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
-            { id: 11, name: 'Kazuma Okamoto', number: '8', position: 'Infield', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, walks: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
-            { id: 12, name: 'Tatsuya Imai', number: '19', position: 'Pitcher', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, walks: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } }
+            { id: 1, name: 'Shohei Ohtani', number: '16', position: 'DH', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
+            { id: 2, name: 'Yoshinobu Yamamoto', number: '18', position: 'P', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
+            { id: 3, name: 'Roki Sasaki', number: '14', position: 'P', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
+            { id: 4, name: 'Seiya Suzuki', number: '27', position: 'OF', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
+            { id: 5, name: 'Shota Imanaga', number: '11', position: 'P', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
+            { id: 6, name: 'Yu Darvish', number: '22', position: 'P', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
+            { id: 7, name: 'Masataka Yoshida', number: '7', position: 'OF', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
+            { id: 8, name: 'Yuki Matsui', number: '23', position: 'IF', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
+            { id: 9, name: 'Yusei Kikuchi', number: '16', position: 'P', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
+            { id: 10, name: 'Tomoyoki Sugano', number: '24', position: 'P', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
+            { id: 11, name: 'Kazuma Okamoto', number: '8', position: 'IF', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } },
+            { id: 12, name: 'Tatsuya Imai', number: '19', position: 'P', stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 } }
         ];
-        
-        // Initialize players - use defaults if localStorage is empty or corrupted
+
         let players = [];
-        try {
-            const savedPlayers = JSON.parse(localStorage.getItem('players'));
-            if (savedPlayers && savedPlayers.length > 0) {
-                players = savedPlayers;
-            } else {
-                players = defaultPlayers;
-                localStorage.setItem('players', JSON.stringify(defaultPlayers));
-            }
-        } catch (e) {
-            players = defaultPlayers;
-            localStorage.setItem('players', JSON.stringify(defaultPlayers));
-        }
-        
-        let games = JSON.parse(localStorage.getItem('games')) || [];
+        let games = [];
         let currentBattingSort = 'homeRuns';
         let currentPitchingSort = 'wins';
 
+        // Load data from localStorage
+        function loadData() {
+            try {
+                const saved = localStorage.getItem('players');
+                if (saved) {
+                    players = JSON.parse(saved);
+                } else {
+                    players = JSON.parse(JSON.stringify(defaultPlayers));
+                    saveData();
+                }
+            } catch (e) {
+                players = JSON.parse(JSON.stringify(defaultPlayers));
+                saveData();
+            }
+
+            try {
+                games = JSON.parse(localStorage.getItem('games')) || [];
+            } catch (e) {
+                games = [];
+            }
+        }
+
+        // Save data to localStorage
+        function saveData() {
+            localStorage.setItem('players', JSON.stringify(players));
+            localStorage.setItem('games', JSON.stringify(games));
+        }
+
+        // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
+            loadData();
             const today = new Date().toISOString().split('T')[0];
-            document.getElementById('gameDate').value = today;
             document.getElementById('newGameDate').value = today;
             refreshAllViews();
         });
@@ -606,7 +545,7 @@
         function switchTab(tabName) {
             document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
-            
+
             document.getElementById(tabName).classList.add('active');
             event.target.classList.add('active');
 
@@ -643,18 +582,7 @@
                 name,
                 number,
                 position,
-                stats: {
-                    hits: 0,
-                    atBats: 0,
-                    homeRuns: 0,
-                    rbis: 0,
-                    runs: 0,
-                    strikeouts: 0,
-                    wins: 0,
-                    losses: 0,
-                    era: 0,
-                    inningsPitched: 0
-                }
+                stats: { hits: 0, atBats: 0, homeRuns: 0, rbis: 0, runs: 0, strikeouts: 0, wins: 0, losses: 0, era: 0, inningsPitched: 0 }
             };
 
             players.push(player);
@@ -663,106 +591,18 @@
             closeAddPlayerModal();
         }
 
-        function deleteGame(id) {
-            if (confirm('Delete this game? This cannot be undone.')) {
-                games = games.filter(g => g.id !== id);
-                saveData();
-                refreshGameLog();
-            }
-        }
-
-        function refreshGameLog() {
-            const container = document.getElementById('gameLogList');
-            if (games.length === 0) {
-                container.innerHTML = '<div class="empty-state"><p>No games logged yet. Log your first game!</p></div>';
-                return;
-            }
-
-            const sortedGames = [...games].sort((a, b) => new Date(b.date) - new Date(a.date));
-            container.innerHTML = `
-                <table class="stats-table">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Opponent</th>
-                            <th>Result</th>
-                            <th>Score</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${sortedGames.map(g => `
-                            <tr>
-                                <td>${new Date(g.date).toLocaleDateString()}</td>
-                                <td>${g.opponent}</td>
-                                <td><strong style="color: ${g.result === 'W' ? '#27ae60' : g.result === 'L' ? '#e74c3c' : '#f39c12'}">${g.result === 'W' ? 'WIN' : g.result === 'L' ? 'LOSS' : 'TIE'}</strong></td>
-                                <td>${g.score || '-'}</td>
-                                <td>
-                                    <button class="btn-small btn-delete" onclick="deleteGame(${g.id})">Delete</button>
-                                </td>
-                            </tr>
-                        `).join('')}
-                    </tbody>
-                </table>
-            `;
-        }
-
         function deletePlayer(id) {
-            if (confirm('Delete this player? This cannot be undone.')) {
+            if (confirm('Delete this player?')) {
                 players = players.filter(p => p.id !== id);
                 saveData();
                 refreshAllViews();
             }
         }
 
-        function deleteGame(id) {
-            if (confirm('Delete this game? This cannot be undone.')) {
-                games = games.filter(g => g.id !== id);
-                saveData();
-                refreshGameLog();
-            }
-        }
-
-        function refreshGameLog() {
-            const container = document.getElementById('gameLogList');
-            if (games.length === 0) {
-                container.innerHTML = '<div class="empty-state"><p>No games logged yet. Log your first game!</p></div>';
-                return;
-            }
-
-            const sortedGames = [...games].sort((a, b) => new Date(b.date) - new Date(a.date));
-            container.innerHTML = `
-                <table class="stats-table">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Opponent</th>
-                            <th>Result</th>
-                            <th>Score</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${sortedGames.map(g => `
-                            <tr>
-                                <td>${new Date(g.date).toLocaleDateString()}</td>
-                                <td>${g.opponent}</td>
-                                <td><strong style="color: ${g.result === 'W' ? '#27ae60' : g.result === 'L' ? '#e74c3c' : '#f39c12'}">${g.result === 'W' ? 'WIN' : g.result === 'L' ? 'LOSS' : 'TIE'}</strong></td>
-                                <td>${g.score || '-'}</td>
-                                <td>
-                                    <button class="btn-small btn-delete" onclick="deleteGame(${g.id})">Delete</button>
-                                </td>
-                            </tr>
-                        `).join('')}
-                    </tbody>
-                </table>
-            `;
-        }
-
         function refreshPlayersList() {
             const container = document.getElementById('playersList');
             if (players.length === 0) {
-                container.innerHTML = '<div class="empty-state"><p>No players yet. Add your first player!</p></div>';
+                container.innerHTML = '<div class="empty-state">No players yet. Add one!</div>';
                 return;
             }
 
@@ -771,7 +611,7 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Number</th>
+                            <th>#</th>
                             <th>Position</th>
                             <th>AVG</th>
                             <th>Hits</th>
@@ -779,7 +619,8 @@
                             <th>RBI</th>
                             <th>W-L</th>
                             <th>K</th>
-                            <th>Actions</th>
+                            <th>ERA</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -794,16 +635,18 @@
                                 <td>${p.stats.rbis}</td>
                                 <td>${p.stats.wins}-${p.stats.losses}</td>
                                 <td>${p.stats.strikeouts}</td>
-                                <td>
-                                    <div class="action-buttons">
-                                        <button class="btn-small btn-delete" onclick="deletePlayer(${p.id})">Delete</button>
-                                    </div>
-                                </td>
+                                <td>${p.stats.era.toFixed(2)}</td>
+                                <td><button class="btn-small btn-delete" onclick="deletePlayer(${p.id})">Delete</button></td>
                             </tr>
                         `).join('')}
                     </tbody>
                 </table>
             `;
+
+            // Update player selects 
+            const select = document.getElementById('statPlayerSelect');
+            select.innerHTML = '<option value="">-- Choose Player --</option>' + 
+                players.map(p => `<option value="${p.id}">${p.name} (#${p.number})</option>`).join('');
         }
 
         function calculateAverage(stats) {
@@ -811,21 +654,81 @@
             return (stats.hits / stats.atBats).toFixed(3);
         }
 
-        function loadPlayerSelect() {
-            const select = document.getElementById('statPlayerSelect');
-            select.innerHTML = '<option value="">-- Choose Player --</option>';
-            players.forEach(p => {
-                const option = document.createElement('option');
-                option.value = p.id;
-                option.textContent = `${p.name} (#${p.number})`;
-                select.appendChild(option);
-            });
+        // Game Management
+        function openAddGameModal() {
+            document.getElementById('addGameModal').classList.add('active');
         }
 
+        function closeAddGameModal() {
+            document.getElementById('addGameModal').classList.remove('active');
+            document.getElementById('opponent').value = '';
+            document.getElementById('gameScore').value = '';
+        }
+
+        function addGame() {
+            const date = document.getElementById('newGameDate').value;
+            const opponent = document.getElementById('opponent').value.trim();
+            const result = document.getElementById('gameResult').value;
+            const score = document.getElementById('gameScore').value.trim();
+
+            if (!date || !opponent) {
+                alert('Please fill in date and opponent');
+                return;
+            }
+
+            games.push({ id: Date.now(), date, opponent, result, score });
+            saveData();
+            refreshGameLog();
+            closeAddGameModal();
+        }
+
+        function deleteGame(id) {
+            if (confirm('Delete this game?')) {
+                games = games.filter(g => g.id !== id);
+                saveData();
+                refreshGameLog();
+            }
+        }
+
+        function refreshGameLog() {
+            const container = document.getElementById('gameLogList');
+            if (games.length === 0) {
+                container.innerHTML = '<div class="empty-state">No games logged yet.</div>';
+                return;
+            }
+
+            const sorted = [...games].sort((a, b) => new Date(b.date) - new Date(a.date));
+            container.innerHTML = `
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Opponent</th>
+                            <th>Result</th>
+                            <th>Score</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${sorted.map(g => `
+                            <tr>
+                                <td>${new Date(g.date).toLocaleDateString()}</td>
+                                <td>${g.opponent}</td>
+                                <td><strong style="color: ${g.result === 'W' ? '#27ae60' : g.result === 'L' ? '#e74c3c' : '#f39c12'}">${g.result === 'W' ? 'WIN' : g.result === 'L' ? 'LOSS' : 'TIE'}</strong></td>
+                                <td>${g.score || '-'}</td>
+                                <td><button class="btn-small btn-delete" onclick="deleteGame(${g.id})">Delete</button></td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            `;
+        }
+
+        // Stats Recording
         function loadPlayerStatsForm() {
             const playerId = document.getElementById('statPlayerSelect').value;
             const form = document.getElementById('statsForm');
-            
+
             if (playerId) {
                 form.style.display = 'block';
                 const player = players.find(p => p.id == playerId);
@@ -836,7 +739,6 @@
                     document.getElementById('rbis').value = player.stats.rbis;
                     document.getElementById('runs').value = player.stats.runs;
                     document.getElementById('strikeouts').value = player.stats.strikeouts;
-                    document.getElementById('walks').value = player.stats.walks || 0;
                     document.getElementById('wins').value = player.stats.wins;
                     document.getElementById('losses').value = player.stats.losses;
                     document.getElementById('era').value = player.stats.era;
@@ -847,7 +749,7 @@
             }
         }
 
-        function recordStats() {
+        function addStatToPlayer() {
             const playerId = document.getElementById('statPlayerSelect').value;
             if (!playerId) {
                 alert('Please select a player');
@@ -855,366 +757,161 @@
             }
 
             const player = players.find(p => p.id == playerId);
-            player.stats.hits = parseInt(document.getElementById('hits').value);
-            player.stats.atBats = parseInt(document.getElementById('atBats').value);
-            player.stats.homeRuns = parseInt(document.getElementById('homeRuns').value);
-            player.stats.rbis = parseInt(document.getElementById('rbis').value);
-            player.stats.runs = parseInt(document.getElementById('runs').value);
-            player.stats.strikeouts = parseInt(document.getElementById('strikeouts').value);
-            player.stats.walks = parseInt(document.getElementById('walks').value);
-            player.stats.wins = parseInt(document.getElementById('wins').value);
-            player.stats.losses = parseInt(document.getElementById('losses').value);
-            player.stats.era = parseFloat(document.getElementById('era').value);
-            player.stats.inningsPitched = parseFloat(document.getElementById('inningsPitched').value);
+            player.stats.hits = parseInt(document.getElementById('hits').value) || 0;
+            player.stats.atBats = parseInt(document.getElementById('atBats').value) || 0;
+            player.stats.homeRuns = parseInt(document.getElementById('homeRuns').value) || 0;
+            player.stats.rbis = parseInt(document.getElementById('rbis').value) || 0;
+            player.stats.runs = parseInt(document.getElementById('runs').value) || 0;
+            player.stats.strikeouts = parseInt(document.getElementById('strikeouts').value) || 0;
+            player.stats.wins = parseInt(document.getElementById('wins').value) || 0;
+            player.stats.losses = parseInt(document.getElementById('losses').value) || 0;
+            player.stats.era = parseFloat(document.getElementById('era').value) || 0;
+            player.stats.inningsPitched = parseFloat(document.getElementById('inningsPitched').value) || 0;
 
             saveData();
-            alert('Stats recorded successfully!');
-            loadPlayerSelect();
+            alert('Stats updated!');
+            refreshAllViews();
             loadPlayerStatsForm();
         }
 
-        function refreshBattingLeaders(sortBy = 'homeRuns') {
-            currentBattingSort = sortBy;
+        // Leaderboards
+        function refreshBattingLeaders(stat) {
+            currentBattingSort = stat;
             const container = document.getElementById('battingLeaders');
-            
-            let sorted;
-            let statLabel;
-            
-            if (sortBy === 'homeRuns') {
-                sorted = [...players].sort((a, b) => b.stats.homeRuns - a.stats.homeRuns);
-                statLabel = 'HRs';
-            } else if (sortBy === 'hits') {
-                sorted = [...players].sort((a, b) => b.stats.hits - a.stats.hits);
-                statLabel = 'Hits';
-            } else if (sortBy === 'rbis') {
-                sorted = [...players].sort((a, b) => b.stats.rbis - a.stats.rbis);
-                statLabel = 'RBIs';
-            } else if (sortBy === 'average') {
-                sorted = [...players].sort((a, b) => {
+
+            let sorted = [...players].sort((a, b) => {
+                if (stat === 'average') {
                     const avgA = a.stats.atBats === 0 ? 0 : a.stats.hits / a.stats.atBats;
                     const avgB = b.stats.atBats === 0 ? 0 : b.stats.hits / b.stats.atBats;
                     return avgB - avgA;
-                });
-                statLabel = 'AVG';
-            } else if (sortBy === 'runs') {
-                sorted = [...players].sort((a, b) => b.stats.runs - a.stats.runs);
-                statLabel = 'Runs';
-            }
+                }
+                return b.stats[stat] - a.stats[stat];
+            });
 
-            if (players.length === 0) {
-                container.innerHTML = '<div class="empty-state"><p>No players yet. Add players to see leaderboards!</p></div>';
-                return;
-            }
+            container.innerHTML = sorted.map((p, i) => {
+                let statValue = stat === 'average' ? calculateAverage(p.stats) : p.stats[stat];
+                let medalClass = '';
+                if (i === 0) medalClass = 'gold';
+                else if (i === 1) medalClass = 'silver';
+                else if (i === 2) medalClass = 'bronze';
 
-            container.innerHTML = `
-                ${sorted.map((p, i) => `
-                    <div class="leaderboard-item">
-                        <div class="rank">${i + 1}</div>
-                        <div class="player-info">
-                            <h3>${p.name}</h3>
-                            <p>${p.position} • #${p.number}</p>
-                            <p style="font-size: 0.85em; color: #999; margin-top: 5px;">
-                                AVG: ${calculateAverage(p.stats)} | H: ${p.stats.hits} | 2B: 0 | HR: ${p.stats.homeRuns} | RBI: ${p.stats.rbis} | R: ${p.stats.runs}
-                            </p>
+                return `
+                    <div class="leader-card ${medalClass}">
+                        <div style="display: flex; align-items: center; width: 100%;">
+                            <div class="leader-rank">${i + 1}</div>
+                            <div class="leader-info">
+                                <div class="leader-name">${p.name}</div>
+                                <div style="font-size: 0.9em; color: #666;">#${p.number} - ${p.position}</div>
+                            </div>
+                            <div class="leader-stat" style="margin-left: auto;">${statValue}</div>
                         </div>
-                        <div class="stat-value">${sortBy === 'average' ? calculateAverage(p.stats) : (sortBy === 'hits' ? p.stats.hits : sortBy === 'rbis' ? p.stats.rbis : sortBy === 'runs' ? p.stats.runs : p.stats.homeRuns)}</div>
                     </div>
-                `).join('')}
-            `;
+                `;
+            }).join('');
+
+            // Update active button
+            document.querySelectorAll('.stat-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.stat === stat) btn.classList.add('active');
+            });
         }
 
-        function refreshPitchingLeaders(sortBy = 'wins') {
-            currentPitchingSort = sortBy;
+        function refreshPitchingLeaders(stat) {
+            currentPitchingSort = stat;
             const container = document.getElementById('pitchingLeaders');
-            const pitchers = players.filter(p => p.position === 'Pitcher');
-            
-            let sorted;
-            
-            if (sortBy === 'wins') {
-                sorted = [...pitchers].sort((a, b) => b.stats.wins - a.stats.wins);
-            } else if (sortBy === 'strikeouts') {
-                sorted = [...pitchers].sort((a, b) => b.stats.strikeouts - a.stats.strikeouts);
-            } else if (sortBy === 'era') {
-                sorted = [...pitchers].sort((a, b) => {
-                    const eraA = a.stats.era || 9999;
-                    const eraB = b.stats.era || 9999;
-                    return eraA - eraB;
-                });
-            }
 
-            if (pitchers.length === 0) {
-                container.innerHTML = '<div class="empty-state"><p>No pitchers added yet.</p></div>';
-                return;
-            }
+            let sorted = [...players].sort((a, b) => {
+                if (stat === 'era') {
+                    return a.stats.era - b.stats.era;
+                }
+                return b.stats[stat] - a.stats[stat];
+            });
 
-            container.innerHTML = `
-                ${sorted.map((p, i) => `
-                    <div class="leaderboard-item">
-                        <div class="rank">${i + 1}</div>
-                        <div class="player-info">
-                            <h3>${p.name}</h3>
-                            <p>#${p.number}</p>
-                            <p style="font-size: 0.85em; color: #999; margin-top: 5px;">
-                                W-L: ${p.stats.wins}-${p.stats.losses} | K: ${p.stats.strikeouts} | ERA: ${p.stats.era.toFixed(2)} | IP: ${p.stats.inningsPitched}
-                            </p>
-                        </div>
-                        <div class="stat-value" style="text-align: right;">
-                            <div style="font-weight: bold; font-size: 1.3em;">${sortBy === 'strikeouts' ? p.stats.strikeouts : sortBy === 'era' ? p.stats.era.toFixed(2) : p.stats.wins}</div>
-                            <div style="font-size: 0.8em; color: #666;">${sortBy === 'strikeouts' ? 'K' : sortBy === 'era' ? 'ERA' : 'W'}</div>
+            container.innerHTML = sorted.map((p, i) => {
+                let statValue;
+                if (stat === 'wins') {
+                    statValue = `${p.stats.wins}-${p.stats.losses}`;
+                } else if (stat === 'strikeouts') {
+                    statValue = p.stats.strikeouts;
+                } else if (stat === 'era') {
+                    statValue = p.stats.era.toFixed(2);
+                }
+
+                let medalClass = '';
+                if (i === 0) medalClass = 'gold';
+                else if (i === 1) medalClass = 'silver';
+                else if (i === 2) medalClass = 'bronze';
+
+                return `
+                    <div class="leader-card ${medalClass}">
+                        <div style="display: flex; align-items: center; width: 100%;">
+                            <div class="leader-rank">${i + 1}</div>
+                            <div class="leader-info">
+                                <div class="leader-name">${p.name}</div>
+                                <div style="font-size: 0.9em; color: #666;">#${p.number}</div>
+                            </div>
+                            <div class="leader-stat" style="margin-left: auto;">${statValue}</div>
                         </div>
                     </div>
-                `).join('')}
-            `;
+                `;
+            }).join('');
+
+            // Update active button
+            document.querySelectorAll('.stat-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.stat === stat) btn.classList.add('active');
+            });
         }
 
         function refreshAllViews() {
-            loadPlayerSelect();
             refreshPlayersList();
             refreshGameLog();
             refreshBattingLeaders(currentBattingSort);
             refreshPitchingLeaders(currentPitchingSort);
         }
 
-        function saveData() {
-            localStorage.setItem('players', JSON.stringify(players));
-            localStorage.setItem('games', JSON.stringify(games));
-        }
-
+        // Data Management
         function exportData() {
             const data = { players, games };
-            const dataStr = JSON.stringify(data, null, 2);
-            const dataBlob = new Blob([dataStr], { type: 'application/json' });
-            const url = URL.createObjectURL(dataBlob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = `baseball-stats-${new Date().toISOString().split('T')[0]}.json`;
-            link.click();
+            const json = JSON.stringify(data, null, 2);
+            const blob = new Blob([json], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `baseball-stats-${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
         }
 
         function importData() {
-            document.getElementById('importFile').click();
-        }
-
-        document.getElementById('importFile').addEventListener('change', (e) => {
-            const file = e.target.files[0];
-            if (file) {
+            document.getElementById('importFile').onchange = (e) => {
+                const file = e.target.files[0];
                 const reader = new FileReader();
                 reader.onload = (event) => {
                     try {
                         const data = JSON.parse(event.target.result);
-                        if (data.players) {
-                            players = data.players;
-                            games = data.games || [];
-                        } else {
-                            players = data;
-                        }
+                        players = data.players || [];
+                        games = data.games || [];
                         saveData();
                         refreshAllViews();
                         alert('Data imported successfully!');
                     } catch (err) {
-                        alert('Error importing file: ' + err.message);
+                        alert('Error importing data: ' + err.message);
                     }
                 };
                 reader.readAsText(file);
-            }
-        });
+            };
+            document.getElementById('importFile').click();
+        }
 
         function clearAllData() {
-            if (confirm('Are you sure? This will delete ALL players, stats, and games. This cannot be undone!')) {
-                players = [];
+            if (confirm('Delete ALL data? This cannot be undone!')) {
+                players = JSON.parse(JSON.stringify(defaultPlayers));
                 games = [];
                 saveData();
                 refreshAllViews();
-                alert('All data cleared');
+                alert('Data cleared!');
             }
         }
-
-        // MLB StatsAPI Integration
-        async function syncMLBStats() {
-            const syncStatus = document.getElementById('syncStatus');
-            const syncError = document.getElementById('syncError');
-            
-            syncStatus.style.display = 'none';
-            syncError.style.display = 'none';
-            
-            syncStatus.innerHTML = '<p>🔄 Syncing with MLB database... This may take a moment.</p>';
-            syncStatus.style.display = 'block';
-            syncStatus.style.background = '#e3f2fd';
-            syncStatus.style.color = '#1976d2';
-            syncStatus.style.border = '1px solid #1976d2';
-
-            try {
-                for (let player of players) {
-                    try {
-                        const mlbData = await searchAndFetchMLBStats(player.name);
-                        if (mlbData) {
-                            // Update player with real MLB stats
-                            Object.assign(player.stats, mlbData);
-                            syncStatus.innerHTML += `<p>✅ Updated: ${player.name}</p>`;
-                        } else {
-                            syncStatus.innerHTML += `<p>⚠️ Not found in MLB database: ${player.name}</p>`;
-                        }
-                    } catch (err) {
-                        syncStatus.innerHTML += `<p>⚠️ Error fetching ${player.name}: ${err.message}</p>`;
-                    }
-                }
-                
-                saveData();
-                refreshAllViews();
-                
-                syncStatus.innerHTML = `
-                    <p style="font-weight: bold; margin-bottom: 10px;">✅ Sync Complete!</p>
-                    <p>All available player stats have been updated with 2026 MLB data.</p>
-                `;
-                syncStatus.style.background = '#d4edda';
-                syncStatus.style.color = '#155724';
-                syncStatus.style.border = '1px solid #c3e6cb';
-                
-            } catch (err) {
-                syncError.innerHTML = `<p><strong>Sync Error:</strong> ${err.message}</p>`;
-                syncError.style.display = 'block';
-            }
-        }
-
-        async function searchAndFetchMLBStats(playerName) {
-            try {
-                // Search for player - Try direct fetch first, fallback to CORS proxies
-                const searchUrl = `https://statsapi.mlb.com/api/v1/people/search?names=${encodeURIComponent(playerName)}`;
-                
-                let searchData = null;
-                let searchResponse = null;
-                
-                // Try direct fetch first
-                try {
-                    searchResponse = await fetch(searchUrl, {
-                        method: 'GET',
-                        headers: { 'Accept': 'application/json' }
-                    });
-                    searchData = await searchResponse.json();
-                } catch (directFetchError) {
-                    console.log(`Direct fetch failed, trying CORS proxy for ${playerName}`);
-                    
-                    // Fallback to CORS proxies
-                    const corsProxies = [
-                        `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(searchUrl)}`,
-                        `https://cors-anywhere.herokuapp.com/${searchUrl}`,
-                        `https://api.allorigins.win/raw?url=${encodeURIComponent(searchUrl)}`
-                    ];
-                    
-                    for (let proxyUrl of corsProxies) {
-                        try {
-                            searchResponse = await fetch(proxyUrl);
-                            if (searchResponse.ok) {
-                                searchData = await searchResponse.json();
-                                console.log(`Successfully fetched using proxy for ${playerName}`);
-                                break;
-                            }
-                        } catch (proxyError) {
-                            console.log(`Proxy ${proxyUrl} failed`);
-                            continue;
-                        }
-                    }
-                }
-
-                if (!searchData || !searchData.people || searchData.people.length === 0) {
-                    console.log(`Player ${playerName} not found in MLB database`);
-                    return null;
-                }
-
-                const mlbPlayer = searchData.people[0];
-                const playerId = mlbPlayer.id;
-
-                // Fetch player stats - Try direct fetch first, fallback to CORS proxies
-                const statsUrl = `https://statsapi.mlb.com/api/v1/people/${playerId}/stat?group=hitting,pitching&type=season`;
-                
-                let statsData = null;
-                let statsResponse = null;
-                
-                // Try direct fetch first
-                try {
-                    statsResponse = await fetch(statsUrl, {
-                        method: 'GET',
-                        headers: { 'Accept': 'application/json' }
-                    });
-                    statsData = await statsResponse.json();
-                } catch (directFetchError) {
-                    console.log(`Direct fetch failed for stats, trying CORS proxy for ${playerName}`);
-                    
-                    // Fallback to CORS proxies
-                    const corsProxies = [
-                        `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(statsUrl)}`,
-                        `https://cors-anywhere.herokuapp.com/${statsUrl}`,
-                        `https://api.allorigins.win/raw?url=${encodeURIComponent(statsUrl)}`
-                    ];
-                    
-                    for (let proxyUrl of corsProxies) {
-                        try {
-                            statsResponse = await fetch(proxyUrl);
-                            if (statsResponse.ok) {
-                                statsData = await statsResponse.json();
-                                console.log(`Successfully fetched stats using proxy for ${playerName}`);
-                                break;
-                            }
-                        } catch (proxyError) {
-                            console.log(`Stats proxy ${proxyUrl} failed`);
-                            continue;
-                        }
-                    }
-                }
-
-                if (!statsData || !statsData.stats || statsData.stats.length === 0) {
-                    return null;
-                }
-
-                if (!statsData.stats || statsData.stats.length === 0) {
-                    return null;
-                }
-
-                const stats = {
-                    hits: 0,
-                    atBats: 0,
-                    homeRuns: 0,
-                    rbis: 0,
-                    runs: 0,
-                    strikeouts: 0,
-                    walks: 0,
-                    wins: 0,
-                    losses: 0,
-                    era: 0,
-                    inningsPitched: 0
-                };
-
-                // Process stats
-                statsData.stats.forEach(statGroup => {
-                    if (statGroup.group.displayName === 'Hitting' && statGroup.stats && statGroup.stats.length > 0) {
-                        const hittingStats = statGroup.stats[0].stats;
-                        stats.hits = hittingStats.hits || 0;
-                        stats.atBats = hittingStats.atBats || 0;
-                        stats.homeRuns = hittingStats.homeRuns || 0;
-                        stats.rbis = hittingStats.rbi || 0;
-                        stats.runs = hittingStats.runs || 0;
-                    }
-                    
-                    if (statGroup.group.displayName === 'Pitching' && statGroup.stats && statGroup.stats.length > 0) {
-                        const pitchingStats = statGroup.stats[0].stats;
-                        stats.strikeouts = pitchingStats.strikeOuts || 0;
-                        stats.walks = pitchingStats.walks || 0;
-                        stats.wins = pitchingStats.wins || 0;
-                        stats.losses = pitchingStats.losses || 0;
-                        stats.era = pitchingStats.era || 0;
-                        stats.inningsPitched = pitchingStats.inningsPitched || 0;
-                    }
-                });
-
-                console.log(`Fetched stats for ${playerName}:`, stats);
-                return stats;
-
-            } catch (error) {
-                console.error(`Error fetching stats for ${playerName}:`, error);
-                throw error;
-            }
-        }
-
     </script>
 </body>
 </html>
